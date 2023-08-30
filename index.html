@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Resume</title>
+  <link rel="icon" type="image/gif" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-toggle" id="navbarToggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="navbar-links" id="navbarLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <br>
+  <div id="full_image">
+    <div id="picture">
+      <div class="image-container">
+        <img src="good_pic.png" alt="Profile Picture">
+      </div>
+    </div>
+  </div>
+  <div id="about">
+    <h1>Hi, I am Rahul Pandharkar</h1>
+    <h3>I am currently pursuing Bachelor's in Technology in Information Technology at KJ Somaiya Institute of Technology (KJSIT).</h3>
+    <h3>I am truly excited about building a career in the captivating world of Cybersecurity.</h3>
+    I can:
+    <div id="actions">
+        Build Websites
+        <br>Build Applications
+        <br>Work with APIs
+    </div>     
+  </div>
+  <div id="skills">
+     <h1 style="color: rgb(78, 205, 236);">Skills</h1>
+     <p>● HTML, CSS, JavaScript, MERN Stack, PHP, MySQL</p>
+     <p>● C, C++, Java, Python, GoLang, Bash
+     <p>● Cyber-Threat Intelligence</p>
+     <p>● Cyber-Threat Hunting</p>
+     <p>● Penetration Testing</p>
+     <p>● Executive Leadership Quality</p>
+     <p>● Good Communication Skills</p>
+     <p>● Quality Documentation and Report Writing</p>
+   </div>
+
+  <div id="education">
+    <h1 style="color: rgb(78, 205, 236);">Education</h1>
+    <p>School: IES Manik Vidyamandir</p>
+    <p>Junior College: Nirmala Memorial Foundation College of Science and Commerce (affiliated to Lakshya Institute by MTEducare)
+    <p>Degree College: KJ Somaiya Institute of Technology</p>
+  </div>
+
+  <div id="projects">
+    <h1 style="color: rgb(0, 204, 255);">Projects</h1>
+    <p><a href="https://github.com/rahulpandharkar/API-Performance-Monitoring.git" target="_blank">Research on Google’s Remote Procedure Call (gRPC) and monitoring its performance</a></p>
+    <p><a href="https://github.com/rahulpandharkar/Password_Manager.git" target="_blank">Developed a Web Password Management Tool</a></p>
+    <p><a href="https://github.com/rahulpandharkar/Parking-Management.git" target="_blank">Developed an application for Gate Security and Parking Management</a></p>
+    <p><a href="https://github.com/rahulpandharkar/mycaptain_cpp-programming/blob/f13c7533f553a35d769b14d73804e0fcdef1f438/Student_DBMS.cpp" target="_blank">Developed a terminal based Student DBMS in C++</a></p>
+    <p><a href="https://github.com/rahulpandharkar/mycaptain_cpp-programming/blob/f13c7533f553a35d769b14d73804e0fcdef1f438/Bus_Reservation.cpp" target="_blank">Developed a terminal based Bus Reservation System in C++</a></p>
+  </div>
+  <div id="experience">
+    <h1 style="color: rgb(0, 204, 255);">Experience</h1>
+    <p>Joint CEO at Students' Council KJSIT</p>
+    <p>Joint CEO at IEEE KJSIT</p>
+    <p>Core Team Member at The Hacker's Meetup Mumbai</p>
+    <p>Web Development Intern at KJSIT IT Department</p>
+    <p>Participant at VTF Threat Hunting Bootcamp</p>
+  </div>
+  <div id="contact">
+    <h1 style="color: rgb(0, 204, 255);">Contact Me</h1>
+    <p>
+        <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/rahul-pandharkar" target="_blank">Rahul Pandharkar</a>
+      </p>
+      <p>
+        <i class="fab fa-github"></i> <a href="https://github.com/rahulpandharkar" target="_blank">rahulpandharkar</a>
+      </p>
+      <p>
+        <i class="far fa-envelope"></i> <a href="mailto:rahulpandharkar@hotmail.com" target="_blank">rahulpandharkar@hotmail.com</a>
+    </p>
+    <p>
+    <i class="fab fa-instagram"></i> <a href="https://instagram.com/rahul.pandharkar" target="_blank">@rahul.pandharkar</a>
+    </p>
+  </div>
+
+  <script> 
+  // Toggle the navigation menu on click
+const navbarToggle = document.getElementById('navbarToggle');
+const navbarLinks = document.getElementById('navbarLinks');
+
+navbarToggle.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active');
+});
+</script>
+</body>
+</html>

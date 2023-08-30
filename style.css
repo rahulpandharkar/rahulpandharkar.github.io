@@ -1,0 +1,317 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: #293237;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+a:hover {
+    color: rgb(0, 253, 156);
+}
+
+p {
+    color: white;
+}
+
+h3 {
+    color: rgb(0, 183, 255);
+}
+
+#about,
+#experience,
+#projects,
+#skills,
+#contact,
+#education {
+    padding: 20px;
+}
+
+#about h1 {
+    text-align: center;
+}
+
+#projects ul li {
+    margin-bottom: 10px;
+}
+
+li.active a {
+    color: #007bff;
+    background-color: #293237;
+    border: 2px solid #007bff;
+    box-shadow: 0 0 10px 2px #007bff;
+}
+
+#about {
+    animation: fade-in-about 2s ease-in-out;
+}
+
+@keyframes fade-in-about {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#skills {
+    animation: fade-in-skills 4s ease-in-out;
+}
+
+@keyframes fade-in-skills {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#education {
+    animation: fade-in-education 5s ease-in-out;
+}
+
+@keyframes fade-in-education {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#projects {
+    animation: fade-in-projects 6s ease-in-out;
+}
+
+@keyframes fade-in-projects {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#experience {
+    animation: fade-in-experience 7s ease-in-out;
+}
+
+@keyframes fade-in-experience {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#contact {
+    animation: fade-in-contact 8s ease-in-out;
+}
+
+@keyframes fade-in-contact {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#picture {
+    animation: fade-in-picture 3s ease-in-out;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    outline: 2px solid rgb(78, 205, 236);
+    overflow: hidden;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+#education,
+#experience {
+    text-align: right;
+}
+
+#experience,
+#projects,
+#skills,
+#contact,
+#education {
+    color: #007bff;
+    background-color: #020202;
+}
+
+#experience:hover,
+#projects:hover,
+#skills:hover,
+#contact:hover,
+#education:hover {
+    color: #fff;
+    background-color: #26568a;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    font-family: "Cascadia Code", monospace;
+}
+
+#full_image {
+    display: flex;
+    justify-content: center;
+}
+
+#actions {
+    color: cyan;
+}
+
+
+#contact {
+    animation: slide-up 1.5s ease-in-out;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#skills p {
+    animation: scale-in 1.5s ease-in-out;
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+#education {
+    animation: fade-in-right 1.5s ease-in-out;
+}
+
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+#projects p {
+    animation: fade-in-left 1.5s ease-in-out;
+}
+
+@keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+
+    #about,
+    #experience,
+    #projects,
+    #skills,
+    #contact,
+    #education {
+        padding: 10px;
+    }
+
+    #about h1 {
+        font-size: 24px;
+    }
+
+    #skills {
+        animation-duration: 3s;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+
+    }
+
+    ul {
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    li {
+        margin: 5px 0;
+
+    }
+}
