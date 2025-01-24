@@ -98,7 +98,7 @@ const Home = () => {
               {/* View CV Button */}
               <div style={{ marginTop: '20px' }}>
                 <button
-                  onClick={() => handleOpenDialog('./src/assets/certificates/resume.pdf')}
+                  onClick={() => handleOpenDialog('/certificates/resume.pdf')}
                   style={{
                     backgroundColor: 'orange',
                     color: 'white',
@@ -181,7 +181,7 @@ const Home = () => {
 
                 {/* The Mould Story Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <img src="./src/assets/icons/the_mould_story.png" alt="The Mould Story Icon" style={{ height: "30px", marginRight: "10px" }} />
+                  <img src="/icons/the_mould_story.png" alt="The Mould Story Icon" style={{ height: "30px", marginRight: "10px" }} />
                   <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>The Mould Story (Jun'24 - Aug'24)</span>
                 </div>
                 <span style={{ fontSize: "14px", color: "white" }}>CRM Chatbot Developer</span>
@@ -197,7 +197,7 @@ const Home = () => {
                     <br />
                     <a
                       href="#!"
-                      onClick={() => handleOpenDialog("./src/assets/certificates/Letter of Recommendation (Mould Story).pdf")}
+                      onClick={() => handleOpenDialog("/certificates/Letter of Recommendation (Mould Story).pdf")}
                       style={{ fontSize: "12px", color: "orange", textDecoration: "none" }}
                     >
                       Click here to view Certificate
@@ -216,7 +216,7 @@ const Home = () => {
 
                 {/* Scientific Impulse Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <img src="./src/assets/icons/scientific_impulse.jpeg" alt="Scientific Impulse Icon" style={{ height: "30px", marginRight: "10px" }} />
+                  <img src="/icons/scientific_impulse.jpeg" alt="Scientific Impulse Icon" style={{ height: "30px", marginRight: "10px" }} />
                   <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>Scientific Impulse (May'24 - Jun'24)</span>
                 </div>
                 <span style={{ fontSize: "14px", color: "white" }}>Researcher</span>
@@ -233,7 +233,7 @@ const Home = () => {
                     <br />
                     <a
                       href="#!"
-                      onClick={() => handleOpenDialog("./src/assets/certificates/scientific_impulse.pdf")}
+                      onClick={() => handleOpenDialog("/certificates/scientific_impulse.pdf")}
                       style={{ fontSize: "12px", color: "orange", textDecoration: "none" }}
                     >
                       Click here to view Certificate
@@ -252,7 +252,7 @@ const Home = () => {
 
                 {/* Maharashtra Cyber Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <img src="./src/assets/icons/maharashtra_cyber.png" alt="Maharashtra Cyber Icon" style={{ height: "30px", marginRight: "10px" }} />
+                  <img src="/icons/maharashtra_cyber.png" alt="Maharashtra Cyber Icon" style={{ height: "30px", marginRight: "10px" }} />
                   <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>Maharashtra Cyber (Dec'24)</span>
                 </div>
                 <span style={{ fontSize: "14px", color: "white" }}>Open Source Intelligence Intern</span>
@@ -280,7 +280,7 @@ const Home = () => {
 
                 {/* KJ Somaiya Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <img src="./src/assets/icons/somaiya.jpeg" alt="KJSIT Icon" style={{ height: "30px", marginRight: "10px" }} />
+                  <img src="/icons/somaiya.jpeg" alt="KJSIT Icon" style={{ height: "30px", marginRight: "10px" }} />
                   <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>KJ Somaiya Institute of Technology (Dec'22 - Jan'23)</span>
                 </div>
                 <span style={{ fontSize: "14px", color: "white" }}>Web Development Intern</span>
@@ -297,7 +297,7 @@ const Home = () => {
                     <br />
                     <a
                       href="#!"
-                      onClick={() => handleOpenDialog("./src/assets/certificates/kjsit.pdf")}
+                      onClick={() => handleOpenDialog("/certificates/kjsit.pdf")}
                       style={{ fontSize: "12px", color: "orange", textDecoration: "none" }}
                     >
                       Click here to view Certificate
@@ -385,7 +385,7 @@ const Home = () => {
                     </a>
                     <br />
                     <a href="https://github.com/ojaskavathe/bitshift" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreBitShift(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -412,7 +412,7 @@ const Home = () => {
                     </a>
                     <br />
                     <a href="https://github.com/rahulpandharkar/parkeazy" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreParkEazy(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -439,7 +439,7 @@ const Home = () => {
                     </a>
                     <br />
                     <a href="https://github.com/rahulpandharkar/recall" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreRecall(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -462,7 +462,7 @@ const Home = () => {
                       Built during a 24-hour hackathon, this app integrates Gemini and Llama AI to let citizens report issues with images. AI describes the images and highlights "hotspots" for admin prioritization. It includes an AI chatbot for problem-solving.
                     </p>
                     <a href="https://github.com/rahulpandharkar/feedback" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreFeedback(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -485,7 +485,7 @@ const Home = () => {
                       An Android app for supervisors to track employees' real-time locations and attendance using Open Source Maps. It sends GPS updates to admins.
                     </p>
                     <a href="https://github.com/rahulpandharkar/Employee_Tracking" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreEmployeeTracking(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -508,7 +508,7 @@ const Home = () => {
                       A pentesting tool for capturing keystrokes and forwarding them to a server for analysis.
                     </p>
                     <a href="https://github.com/rahulpandharkar/Keylogger" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreKeylogger(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -531,7 +531,7 @@ const Home = () => {
                       A web-based tool to save and retrieve user passwords using HTML, CSS, JavaScript, PHP, and MySQL.
                     </p>
                     <a href="https://github.com/rahulpandharkar/Password_Manager" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMorePasswordManager(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -555,7 +555,7 @@ const Home = () => {
                     </p>
                     <br />
                     <a href="https://github.com/rahulpandharkar/api-performance-monitoring" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreRestful(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -582,7 +582,7 @@ const Home = () => {
                     </a>
                     <br />
                     <a href="https://github.com/rahulpandharkar/tagwise" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreTagWise(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -605,7 +605,7 @@ const Home = () => {
                       A simple web app using HTML, CSS, JavaScript, and PHP for effective user management.
                     </p>
                     <a href="https://github.com/rahulpandharkar/user-management-system" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreUserManagement(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -628,7 +628,7 @@ const Home = () => {
                       An AI-powered chatbot designed to assist passengers of Indian Railways. It answers queries and sends issues to the respective departments for quick resolution.
                     </p>
                     <a href="https://github.com/rahulpandharkar/railway_assistance" target="_blank">
-                      <img src="./src/assets/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
+                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
                     </a>
                     <br />
                     <button onClick={() => setShowMoreRailwayChatbot(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
@@ -652,7 +652,7 @@ const Home = () => {
             <div style={{ textAlign: "justify" }}>
               {/* General Secretary Experience */}
               <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                <img src="./src/assets/icons/sc.png" alt="General Secretary Logo" style={{ height: "50px", marginRight: "10px", backgroundColor: "white" }} />
+                <img src="/icons/sc.png" alt="General Secretary Logo" style={{ height: "50px", marginRight: "10px", backgroundColor: "white" }} />
                 <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold", textAlign: "left" }}>Students' Council, KJSIT (Jan'22 - Dec'24)</span>
               </div>
               <span style={{ fontSize: "14px", color: "white" }}>General Secretary </span>
@@ -686,7 +686,7 @@ const Home = () => {
 
               {/* The Hackers Meetup Experience */}
               <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                <img src="./src/assets/icons/thm.png" alt="The Hackers Meetup Logo" style={{ height: "40px", marginRight: "10px", backgroundColor: "white" }} />
+                <img src="/icons/thm.png" alt="The Hackers Meetup Logo" style={{ height: "40px", marginRight: "10px", backgroundColor: "white" }} />
                 <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>The Hackers Meetup (Jul'23 - Nov'24)</span>
               </div>
               <span style={{ fontSize: "14px", color: "white" }}>Core Team</span>
@@ -720,7 +720,7 @@ const Home = () => {
 
               {/* IEEE Students Chapter Experience */}
               <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                <img src="./src/assets/icons/ieee_kjsit.png" alt="IEEE Logo" style={{ height: "50px", marginRight: "10px" }} />
+                <img src="/icons/ieee_kjsit.png" alt="IEEE Logo" style={{ height: "50px", marginRight: "10px" }} />
                 <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>IEEE KJSIT (Sep'23 - May'24)</span>
               </div>
               <span style={{ fontSize: "14px", color: "white" }}>Joint Chief Executive Officer</span>
@@ -750,7 +750,7 @@ const Home = () => {
 
               {/* NSS KJSIEIT Experience */}
               <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                <img src="./src/assets/icons/nss.png" alt="NSS Logo" style={{ height: "50px", marginRight: "10px" }} />
+                <img src="/icons/nss.png" alt="NSS Logo" style={{ height: "50px", marginRight: "10px" }} />
                 <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>NSS KJSIEIT (Jul'22 - Jan'23)</span>
               </div>
               <span style={{ fontSize: "14px", color: "white" }}>Member</span>
@@ -925,7 +925,7 @@ const Home = () => {
           {/* Animation Container */}
           <div className="animation-container">
             <img
-              src={`./src/assets/animations/${selectedMenu}/frame_${currentFrame}.png`}
+              src={`/animations/${selectedMenu}/frame_${currentFrame}.png`}
               alt={`Frame ${currentFrame}`}
               className="animation-frame"
             />

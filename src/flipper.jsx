@@ -156,7 +156,7 @@ const FlipperModel = () => {
           gltf.scene.add(displayPlane);
 
           // Scale the model based on the screen size
-          const scaleFactor = window.innerWidth < 768 ? 0.5 : 1;  // Adjust scale for small screens
+          const scaleFactor = window.innerWidth < 768 ? 0.5 : 1;  // Adjust scale r small screens
           gltf.scene.scale.set(scaleFactor, scaleFactor, scaleFactor);  // Scale the entire model
 
           const sphereGeometry = new THREE.SphereGeometry(0.015, 32, 32);

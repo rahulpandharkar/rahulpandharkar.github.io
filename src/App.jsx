@@ -4,6 +4,7 @@ import FlipperModel from './flipper.jsx';
 import './flipper.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './home.jsx';
+import './home.css'; 
 
 const App = () => {
   return (
