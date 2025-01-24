@@ -162,8 +162,8 @@ const FlipperModel = () => {
           const sphereGeometry = new THREE.SphereGeometry(0.02, 32, 32);
           const sphereMaterial = new THREE.MeshBasicMaterial({
             color: 0xff0000,       // Red color
-            transparent: false,     // Enable transparency
-            opacity: 1           // Set opacity (0 is fully transparent, 1 is fully opaque)
+            transparent: true,     // Enable transparency
+            opacity: 0           // Set opacity (0 is fully transparent, 1 is fully opaque)
           });
           const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
           sphere.position.set(0.13, 0.05, -0.293);
