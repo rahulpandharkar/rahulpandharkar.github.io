@@ -864,6 +864,7 @@ const Home = () => {
         );
       case 'Contact':
         return (
+          <div className="text-for-typewriter">
           <div className="info-container">
             <div className="contact-icons">
               <a href="mailto:rahulpandharkar@hotmail.com" className="contact-icon">
@@ -883,6 +884,7 @@ const Home = () => {
                 <span>There's no point, I'm socially dead :( </span>
               </a>
             </div>
+          </div>
           </div>
         );
         
