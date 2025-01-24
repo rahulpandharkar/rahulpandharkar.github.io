@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Menu } from 'lucide-react'; // Assuming you're using lucide-react for the Menu icon
-import './Home.css'; // Import your CSS
+import './home.css'; // Import your CSS
 
 const Home = () => {
   const [currentFrame, setCurrentFrame] = useState(0);
