@@ -138,7 +138,7 @@ const FlipperModel = () => {
 
     const loader = new GLTFLoader();
     loader.load(
-      './src/assets/models/flipper_fixed.glb',
+      '/flipper_fixed.glb',
       (gltf) => {
         scene.add(gltf.scene);
         gltf.scene.position.set(0, 0, 0);
