@@ -111,7 +111,7 @@ const FlipperModel = () => {
   
     animationRef.current = setInterval(() => {
       const image = new Image();
-      image.src = `./src/assets/animations/flipper_home/frame_${currentFrame}.png`;
+      image.src = `/animations/flipper_home/frame_${currentFrame}.png`;
   
       image.onload = () => {
         // Set canvas background color to orange
@@ -138,13 +138,13 @@ const FlipperModel = () => {
 
     const loader = new GLTFLoader();
     loader.load(
-      '/flipper_fixed.glb',
+      '/models/flipper_fixed.glb',
       (gltf) => {
         scene.add(gltf.scene);
         gltf.scene.position.set(0, 0, 0);
 
         const initialImage = new Image();
-        initialImage.src = './src/assets/animations/flipper_home/startup.png';
+        initialImage.src = 'animations/flipper_home/startup.png';
         
         initialImage.onload = () => {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
