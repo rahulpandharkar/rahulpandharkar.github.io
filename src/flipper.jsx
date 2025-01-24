@@ -159,7 +159,7 @@ const FlipperModel = () => {
           const scaleFactor = window.innerWidth < 768 ? 0.5 : 1;  // Adjust scale r small screens
           gltf.scene.scale.set(scaleFactor, scaleFactor, scaleFactor);  // Scale the entire model
 
-          const sphereGeometry = new THREE.SphereGeometry(0.015, 32, 32);
+          const sphereGeometry = new THREE.SphereGeometry(0.02, 32, 32);
           const sphereMaterial = new THREE.MeshBasicMaterial({
             color: 0xff0000,       // Red color
             transparent: false,     // Enable transparency
@@ -170,20 +170,9 @@ const FlipperModel = () => {
           gltf.scene.add(sphere);
 
           const onSphereClick = (event) => {
-            // Check if the event is a mouse event or a touch event
-            const isTouchEvent = event.touches && event.touches.length > 0;
-            
-            // Update mouse coordinates based on the event type (mouse or touch)
-            if (isTouchEvent) {
-              // If it's a touch event, get the touch coordinates
-              const touch = event.touches[0];
-              mouse.x = (touch.clientX / window.innerWidth) * 2 - 1;
-              mouse.y = -(touch.clientY / window.innerHeight) * 2 + 1;
-            } else {
-              // Otherwise, it's a mouse event
-              mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-              mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-            }
+            // Handle only mouse events
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
           
             // Update the raycaster with the new mouse position
             raycaster.setFromCamera(mouse, camera);
@@ -196,9 +185,6 @@ const FlipperModel = () => {
           
           // Add event listeners for both mouse and touch events
           window.addEventListener('click', onSphereClick, false);   // For mouse clicks
-          window.addEventListener('touchstart', onSphereClick, false); // For touch events
-
-          window.addEventListener('click', onSphereClick, false);
         };
 
         const lights = [
@@ -270,7 +256,6 @@ const FlipperModel = () => {
   return (
     <div id="three-container" className='md-6'>
       <div ref={mountRef} style={{ width: '100%', height: '100%' }}></div>
-      <button className = "log" onClick={() => console.log(cameraRef.current.position)}>Log Camera Position</button>
     </div>
   );
 };
