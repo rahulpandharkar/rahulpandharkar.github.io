@@ -358,7 +358,8 @@ body {
   .contact-icons {
     max-width: 100%;
     /* Allows container to shrink for smaller screens */
-    padding: 0 20px;
+  
+    
     /* Add some padding on the sides */
   }
 
