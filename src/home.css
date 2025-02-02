@@ -357,10 +357,6 @@ body {
 @media (max-width: 768px) {
   .contact-icons {
     max-width: 100%;
-    /* Allows container to shrink for smaller screens */
-  
-    
-    /* Add some padding on the sides */
   }
 
   .contact-icon {
