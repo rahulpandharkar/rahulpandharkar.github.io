@@ -297,6 +297,9 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
+  width: 100%;
+  max-width: 800px; /* Ensures the icons container doesn't stretch too wide on desktop */
+  margin: 0 auto; /* Centering the container */
 }
 
 .contact-icon {
@@ -320,4 +323,24 @@ html, body {
 
 .contact-icon:hover {
   color: #ff6600;
+}
+
+@media (max-width: 768px) {
+  .contact-icons {
+    max-width: 100%; /* Allows container to shrink for smaller screens */
+    padding: 0 20px; /* Add some padding on the sides */
+  }
+
+  .contact-icon {
+    font-size: 18px; /* Adjust font size for better readability on smaller screens */
+  }
+
+  .contact-icon span {
+    font-size: 0.9rem; /* Decrease text size to fit better */
+    white-space: normal; /* Allow text to wrap to the next line */
+  }
+
+  .contact-icons {
+    padding-bottom: 30px; /* Add some space at the bottom */
+  }
 }
