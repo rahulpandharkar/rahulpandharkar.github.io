@@ -11,6 +11,7 @@ const Home = () => {
   const [highlightedIndex, setHighlightedIndex] = useState(0);
   const navigate = useNavigate();
 
+  const [showMoreDallas, setShowMoreDallas] = useState(false);
   const [showMoreTheMouldStory, setShowMoreTheMouldStory] = useState(false);
   const [showMoreScientificImpulse, setShowMoreScientificImpulse] = useState(false);
   const [showMoreMaharashtraCyber, setShowMoreMaharashtraCyber] = useState(false);
@@ -213,6 +214,38 @@ const Home = () => {
                   </button>
                 )}
                 <br /><br />
+                {/* The Mould Story Experience */}
+                <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                  <img src="/icons/dallas.png" alt="University of Texas Logo" style={{ height: "30px", marginRight: "10px" }} />
+                  <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>University of Texas (Jun'23 - Jul'24)</span>
+                </div>
+                <span style={{ fontSize: "14px", color: "white" }}>Full Stack Developer</span>
+                <br />
+                {showMoreDallas ? (
+                  <>
+                    <span style={{ fontSize: "12px", color: "white" }}>
+                      Developed a web application using React for the frontend and Python for the backend, with MongoDB as the database. <br />
+                      Integrated various APIs, including Razorpay for payments, Google Maps for location services, and Firebase for enhanced data communication.
+                    </span>
+                    <br />
+                    <a
+                      href="#!"
+                      onClick={() => handleOpenDialog("/certificates/Dallas LOA.pdf")}
+                      style={{ fontSize: "12px", color: "orange", textDecoration: "none" }}
+                    >
+                      Click here to view Certificate
+                    </a>
+                    <br /><br />
+                    <button onClick={() => setShowMoreDallas(false)} style={{ fontSize: "12px", color: "orange", background: "none", border: "none", cursor: "pointer" }}>
+                      View Less
+                    </button>
+                  </>
+                ) : (
+                  <button onClick={() => setShowMoreDallas(true)} style={{ fontSize: "12px", color: "orange", background: "none", border: "none", cursor: "pointer" }}>
+                    View More
+                  </button>
+                )}
+                <br /><br />
 
                 {/* Scientific Impulse Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
@@ -253,7 +286,7 @@ const Home = () => {
                 {/* Maharashtra Cyber Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
                   <img src="/icons/maharashtra_cyber.png" alt="Maharashtra Cyber Icon" style={{ height: "30px", marginRight: "10px" }} />
-                  <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>Maharashtra Cyber (Dec'24)</span>
+                  <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>Maharashtra Cyber (Dec'23)</span>
                 </div>
                 <span style={{ fontSize: "14px", color: "white" }}>Open Source Intelligence Intern</span>
                 <br />
@@ -862,33 +895,33 @@ const Home = () => {
             </div>
           </div>
         );
-        case 'Contact':
-          return (
-            <div className="text-for-typewriter">
-              <div className="info-container">
-                <div className="contact-icons">
-                  <a href="mailto:rahulpandharkar@hotmail.com" className="contact-icon">
-                    <i className="far fa-envelope fa-3x"></i>
-                    <span>Mail Me! (Perhaps an opportunity?)</span>
-                  </a>
-                  <a href="https://www.linkedin.com/in/rahul-pandharkar" className="contact-icon">
-                    <i className="fab fa-linkedin fa-3x"></i>
-                    <span>Visit only if you're gonna recruit me :) </span>
-                  </a>
-                  <a href="https://github.com/rahulpandharkar" className="contact-icon">
-                    <i className="fab fa-github fa-3x"></i>
-                    <span>Care to see my projects?</span>
-                  </a>
-                  <a href="https://www.instagram.com/rahul.pandharkar" className="contact-icon">
-                    <i className="fab fa-instagram fa-3x"></i>
-                    <span>There's no point, I'm socially dead :( </span>
-                  </a>
-                </div>
+      case 'Contact':
+        return (
+          <div className="text-for-typewriter">
+            <div className="info-container">
+              <div className="contact-icons">
+                <a href="mailto:rahulpandharkar@hotmail.com" className="contact-icon">
+                  <i className="far fa-envelope fa-3x"></i>
+                  <span>Mail Me! (Perhaps an opportunity?)</span>
+                </a>
+                <a href="https://www.linkedin.com/in/rahul-pandharkar" className="contact-icon">
+                  <i className="fab fa-linkedin fa-3x"></i>
+                  <span>Visit only if you're gonna recruit me :) </span>
+                </a>
+                <a href="https://github.com/rahulpandharkar" className="contact-icon">
+                  <i className="fab fa-github fa-3x"></i>
+                  <span>Care to see my projects?</span>
+                </a>
+                <a href="https://www.instagram.com/rahul.pandharkar" className="contact-icon">
+                  <i className="fab fa-instagram fa-3x"></i>
+                  <span>There's no point, I'm socially dead :( </span>
+                </a>
               </div>
             </div>
-          );
-        
-        
+          </div>
+        );
+
+
     }
   };
 

@@ -61,7 +61,7 @@ const FlipperModel = () => {
         opacity: 0.8,
         side: THREE.DoubleSide,
       });
-      
+
       const displayPlane = new THREE.Mesh(planeGeometry, planeMaterial);
       displayPlane.position.set(0.122, 0.048, 0.0896);
       displayPlane.rotation.set(0, Math.PI / 2, 0);
@@ -73,68 +73,68 @@ const FlipperModel = () => {
       controls.enabled = false; // Disable controls 
       const startTime = Date.now();
       const duration = 100;
-   
-      const targetPosition = new THREE.Vector3(
-          0.22806883362836908,
-          -4.870690028110104e-8, 
-          -0.004122911981849736
-      );
-   
-      const zoomAnimation = () => {
-          const elapsed = Date.now() - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          
-          // Use smooth easing
-          const easedProgress = progress * progress; // Quadratic easing
-          camera.position.lerpVectors(endCameraPosition, targetPosition, easedProgress);
-   
-          if (progress < 1) {
-              requestAnimationFrame(zoomAnimation);
-          } else {
-              setTimeout(() => {
-                  navigate("/home");
-              }, 200);
-          }
-      };
-      
-      requestAnimationFrame(zoomAnimation);
-   };
 
-   const startAnimation = (displayPlane, scene) => {
-    const frameCount = 16;
-    let currentFrame = 0;
-    const frameRate = 100;
-    
-    if (animationRef.current) {
-      clearInterval(animationRef.current);
-    }
-  
-    animationRef.current = setInterval(() => {
-      const image = new Image();
-      image.src = `/animations/flipper_home/frame_${currentFrame}.png`;
-  
-      image.onload = () => {
-        // Set canvas background color to orange
-        ctx.fillStyle = 'orange';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-  
-        // Apply mix-blend-mode to make image blend with background
-        ctx.globalCompositeOperation = 'source-over'; // Make the image blend as desired
-  
-        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-  
-        displayPlane.material.map.needsUpdate = true;
+      const targetPosition = new THREE.Vector3(
+        0.22806883362836908,
+        -4.870690028110104e-8,
+        -0.004122911981849736
+      );
+
+      const zoomAnimation = () => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Use smooth easing
+        const easedProgress = progress * progress; // Quadratic easing
+        camera.position.lerpVectors(endCameraPosition, targetPosition, easedProgress);
+
+        if (progress < 1) {
+          requestAnimationFrame(zoomAnimation);
+        } else {
+          setTimeout(() => {
+            navigate("/home");
+          }, 200);
+        }
       };
-  
-      currentFrame = (currentFrame + 1) % frameCount;
-  
-      if (currentFrame === 0) {
+
+      requestAnimationFrame(zoomAnimation);
+    };
+
+    const startAnimation = (displayPlane, scene) => {
+      const frameCount = 16;
+      let currentFrame = 0;
+      const frameRate = 100;
+
+      if (animationRef.current) {
         clearInterval(animationRef.current);
-        performZoomTransition(camera, controlsRef.current);
       }
-    }, frameRate);
-  };
-  
+
+      animationRef.current = setInterval(() => {
+        const image = new Image();
+        image.src = `/animations/flipper_home/frame_${currentFrame}.png`;
+
+        image.onload = () => {
+          // Set canvas background color to orange
+          ctx.fillStyle = 'orange';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+          // Apply mix-blend-mode to make image blend with background
+          ctx.globalCompositeOperation = 'source-over'; // Make the image blend as desired
+
+          ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+          displayPlane.material.map.needsUpdate = true;
+        };
+
+        currentFrame = (currentFrame + 1) % frameCount;
+
+        if (currentFrame === 0) {
+          clearInterval(animationRef.current);
+          performZoomTransition(camera, controlsRef.current);
+        }
+      }, frameRate);
+    };
+
 
     const loader = new GLTFLoader();
     loader.load(
@@ -145,12 +145,12 @@ const FlipperModel = () => {
 
         const initialImage = new Image();
         initialImage.src = 'animations/flipper_home/startup.png';
-        
+
         initialImage.onload = () => {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
           ctx.drawImage(initialImage, 0, 0, canvas.width, canvas.height);
-          ctx.fillStyle = 'orange'; 
-          
+          ctx.fillStyle = 'orange';
+
           const texture = new THREE.CanvasTexture(canvas);
           const displayPlane = createDisplayPlane(texture);
           gltf.scene.add(displayPlane);
@@ -173,16 +173,16 @@ const FlipperModel = () => {
             // Handle only mouse events
             mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-          
+
             // Update the raycaster with the new mouse position
             raycaster.setFromCamera(mouse, camera);
-          
+
             const intersects = raycaster.intersectObject(sphere);
             if (intersects.length > 0) {
               startAnimation(displayPlane, scene);
             }
           };
-          
+
           // Add event listeners for both mouse and touch events
           window.addEventListener('click', onSphereClick, false);   // For mouse clicks
         };
@@ -211,7 +211,7 @@ const FlipperModel = () => {
 
         const startTime = Date.now();
         const animationDuration = 3;
-        
+
         const animateCameraZoom = () => {
           const elapsedTime = (Date.now() - startTime) / 400;
           const progress = Math.min(elapsedTime / animationDuration, 1);

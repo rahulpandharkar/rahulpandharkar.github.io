@@ -1,17 +1,20 @@
 /* Reset default browser styles and ensure proper viewport sizing */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
   background-color: #000;
-  position: fixed; /* Prevents mobile browser chrome from affecting viewport */
+  position: fixed;
+  /* Prevents mobile browser chrome from affecting viewport */
 }
 
 /* Container for the Three.js scene */
 #three-container {
-  position: fixed; /* Use fixed instead of absolute for better mobile handling */
+  position: fixed;
+  /* Use fixed instead of absolute for better mobile handling */
   top: 0;
   left: 0;
   width: 100%;
@@ -22,12 +25,16 @@ html, body {
 /* Ensure canvas fits viewport properly */
 canvas {
   display: block;
-  width: 100vw !important; /* Force full viewport width */
-  height: 100vh !important; /* Force full viewport height */
+  width: 100vw !important;
+  /* Force full viewport width */
+  height: 100vh !important;
+  /* Force full viewport height */
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Ensures model maintains aspect ratio */
-  touch-action: none; /* Prevents default touch behaviors */
+  object-fit: contain;
+  /* Ensures model maintains aspect ratio */
+  touch-action: none;
+  /* Prevents default touch behaviors */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -39,7 +46,8 @@ canvas {
 
 /* Log button styling */
 .log {
-  position: fixed; /* Use fixed positioning for consistent placement */
+  position: fixed;
+  /* Use fixed positioning for consistent placement */
   top: 20px;
   left: 20px;
   padding: 10px 20px;
@@ -49,7 +57,8 @@ canvas {
   border-radius: 5px;
   cursor: pointer;
   z-index: 100;
-  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
+  /* Remove tap highlight on mobile */
 }
 
 button:hover {
@@ -58,71 +67,78 @@ button:hover {
 
 /* Device-specific optimizations */
 @media screen and (orientation: portrait) {
+
   /* Adjustments for portrait mode */
   canvas {
-      width: 100vw !important;
-      height: 100vh !important;
+    width: 100vw !important;
+    height: 100vh !important;
   }
 }
 
 @media screen and (orientation: landscape) {
+
   /* Adjustments for landscape mode */
   canvas {
-      width: 100vw !important;
-      height: 100vh !important;
+    width: 100vw !important;
+    height: 100vh !important;
   }
 }
 
 /* High-DPI mobile devices (including 1080x2400) */
 @media screen and (max-width: 1080px),
-     screen and (max-device-width: 1080px) {
-  html, body {
-      -webkit-text-size-adjust: none; /* Prevent automatic text scaling */
-      text-size-adjust: none;
+screen and (max-device-width: 1080px) {
+
+  html,
+  body {
+    -webkit-text-size-adjust: none;
+    /* Prevent automatic text scaling */
+    text-size-adjust: none;
   }
 
   #three-container {
-      width: 100vw;
-      height: 100vh;
+    width: 100vw;
+    height: 100vh;
   }
 
   canvas {
-      width: 100vw !important;
-      height: 100vh !important;
+    width: 100vw !important;
+    height: 100vh !important;
   }
 
   .log {
-      font-size: 14px;
-      padding: 8px 16px;
-      top: 16px;
-      left: 16px;
+    font-size: 14px;
+    padding: 8px 16px;
+    top: 16px;
+    left: 16px;
   }
 }
 
 /* Smaller devices */
 @media screen and (max-width: 480px) {
   .log {
-      font-size: 12px;
-      padding: 6px 12px;
-      top: 12px;
-      left: 12px;
+    font-size: 12px;
+    padding: 6px 12px;
+    top: 12px;
+    left: 12px;
   }
 }
 
 /* Prevent scroll bounce effects on iOS */
 @supports (-webkit-overflow-scrolling: touch) {
-  html, body {
-      position: fixed;
-      overflow: hidden;
+
+  html,
+  body {
+    position: fixed;
+    overflow: hidden;
   }
 }
 
 /* Ensure proper sizing on devices with notches */
 @supports (padding: max(0px)) {
   body {
-      padding-left: env(safe-area-inset-left);
-      padding-right: env(safe-area-inset-right);
-      padding-top: env(safe-area-inset-top);
-      padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }

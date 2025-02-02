@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* Reset and Base Styles */
-html, body {
+html,
+body {
   margin: 0;
   font-family: 'Press Start 2P', sans-serif;
   background-color: #FF9100;
   color: black;
   min-height: 100vh;
-  overflow-y: auto; 
+  overflow-y: auto;
   scrollbar-width: 0px;
 }
 
@@ -15,13 +16,14 @@ html, body {
 .everything {
   position: relative;
   display: flex;
-  height: 100vh; 
+  height: 100vh;
 
 }
 
 /* Hide the scrollbar but still allow scrolling */
 .everything::-webkit-scrollbar {
-  display: block; /* Hide scrollbar */
+  display: block;
+  /* Hide scrollbar */
 }
 
 .home-container {
@@ -58,7 +60,8 @@ html, body {
 
 /* Hamburger Menu Button - Hidden by default (for desktop) */
 .hamburger-menu {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   position: fixed;
   top: 20px;
   left: 20px;
@@ -84,11 +87,14 @@ html, body {
 /* Menu Ribbon - Centered on screen */
 .menu-ribbon {
   width: auto;
-  max-width: 100%; /* Allow it to expand but limit to 100% of screen width */
+  max-width: 100%;
+  /* Allow it to expand but limit to 100% of screen width */
   position: fixed;
   top: 0;
-  left: 50%; /* Center the menu horizontally */
-  transform: translateX(-50%); /* Adjust by 50% of its own width to truly center it */
+  left: 50%;
+  /* Center the menu horizontally */
+  transform: translateX(-50%);
+  /* Adjust by 50% of its own width to truly center it */
   display: flex;
   justify-content: center;
   background-color: #cc883a;
@@ -168,6 +174,7 @@ html, body {
 
 /* Responsive Styles for Smaller Devices */
 @media screen and (max-width: 1060px) {
+
   /* Show hamburger menu only on smaller screens */
   .hamburger-menu {
     display: block;
@@ -190,7 +197,8 @@ html, body {
     display: flex;
     position: fixed;
     top: 0;
-    left: 120px; /* Start off-screen */
+    left: 120px;
+    /* Start off-screen */
     height: 100vh;
     width: 250px;
     flex-direction: column;
@@ -198,12 +206,14 @@ html, body {
     align-items: center;
     padding-top: 60px;
     background-color: #cc883a;
-    transition: left 0.3s ease; /* Transition for sliding in */
+    transition: left 0.3s ease;
+    /* Transition for sliding in */
     z-index: 1000;
   }
-  
+
   .menu-ribbon.open.active {
-    left: 0; /* Slide in to the left */
+    left: 0;
+    /* Slide in to the left */
   }
 
   /* Adjust menu items for smaller screens */
@@ -228,18 +238,22 @@ html, body {
 }
 
 @media screen and (min-width: 1059px) {
+
   /* Adjust the elements that are too large */
   .menu-ribbon {
-    width: 100%; /* Adjust as needed */
-    font-size: 0.1rem; /* Reduce font size */
+    width: 100%;
+    /* Adjust as needed */
+    font-size: 0.1rem;
+    /* Reduce font size */
   }
 
   .animation-frame {
-    width: 200px; /* Adjust based on your design */
+    width: 200px;
+    /* Adjust based on your design */
     height: 100px;
   }
 
-  .everything { 
+  .everything {
     font-size: 0.1vh;
   }
 }
@@ -263,17 +277,23 @@ html, body {
 /* Keyframes */
 @keyframes typewriter {
   from {
-    width: 0; /* Start with no visible text */
+    width: 0;
+    /* Start with no visible text */
   }
+
   to {
-    width: 100%; /* Fully reveal the text */
+    width: 100%;
+    /* Fully reveal the text */
   }
 }
 
 @keyframes blink {
-  0%, 100% {
+
+  0%,
+  100% {
     border-color: transparent;
   }
+
   50% {
     border-color: white;
   }
@@ -282,13 +302,20 @@ html, body {
 /* Typewriter effect */
 .text-for-typewriter {
   display: inline-block;
-  white-space: pre-wrap; /* Preserve spaces and line breaks */
-  overflow: hidden; /* Hide overflowing text */
-  width: 0; /* Start with no visible text */
-  animation: typewriter 2s steps(40) 0s forwards, blink 0.75s steps(1) 4s; /* Stop blinking after typing */
-  border-right: 2px solid white; /* Simulate blinking cursor */
-  color: rgb(255, 255, 255); /* Text color */
-  animation-fill-mode: forwards; /* Keep the cursor hidden after animation */
+  white-space: pre-wrap;
+  /* Preserve spaces and line breaks */
+  overflow: hidden;
+  /* Hide overflowing text */
+  width: 0;
+  /* Start with no visible text */
+  animation: typewriter 2s steps(40) 0s forwards, blink 0.75s steps(1) 4s;
+  /* Stop blinking after typing */
+  border-right: 2px solid white;
+  /* Simulate blinking cursor */
+  color: rgb(255, 255, 255);
+  /* Text color */
+  animation-fill-mode: forwards;
+  /* Keep the cursor hidden after animation */
 }
 
 /* Contact Icons */
@@ -298,8 +325,10 @@ html, body {
   align-items: flex-start;
   gap: 30px;
   width: 100%;
-  max-width: 800px; /* Ensures the icons container doesn't stretch too wide on desktop */
-  margin: 0 auto; /* Centering the container */
+  max-width: 800px;
+  /* Ensures the icons container doesn't stretch too wide on desktop */
+  margin: 0 auto;
+  /* Centering the container */
 }
 
 .contact-icon {
@@ -327,20 +356,26 @@ html, body {
 
 @media (max-width: 768px) {
   .contact-icons {
-    max-width: 100%; /* Allows container to shrink for smaller screens */
-    padding: 0 20px; /* Add some padding on the sides */
+    max-width: 100%;
+    /* Allows container to shrink for smaller screens */
+    padding: 0 20px;
+    /* Add some padding on the sides */
   }
 
   .contact-icon {
-    font-size: 18px; /* Adjust font size for better readability on smaller screens */
+    font-size: 18px;
+    /* Adjust font size for better readability on smaller screens */
   }
 
   .contact-icon span {
-    font-size: 0.9rem; /* Decrease text size to fit better */
-    white-space: normal; /* Allow text to wrap to the next line */
+    font-size: 0.9rem;
+    /* Decrease text size to fit better */
+    white-space: normal;
+    /* Allow text to wrap to the next line */
   }
 
   .contact-icons {
-    padding-bottom: 30px; /* Add some space at the bottom */
+    padding-bottom: 30px;
+    /* Add some space at the bottom */
   }
 }
