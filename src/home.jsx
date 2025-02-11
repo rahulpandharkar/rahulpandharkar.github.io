@@ -900,27 +900,26 @@ const Home = () => {
           <div className="text-for-typewriter">
             <div className="info-container">
               <div className="contact-icons">
-                <a href="mailto:rahulpandharkar@hotmail.com" className="contact-icon">
+                <a href="mailto:rahulpandharkar@hotmail.com" className="contact-icon" target="_blank" rel="noopener noreferrer">
                   <i className="far fa-envelope fa-3x"></i>
                   <span>Mail Me! (Perhaps an opportunity?)</span>
                 </a>
-                <a href="https://www.linkedin.com/in/rahul-pandharkar" className="contact-icon">
+                <a href="https://www.linkedin.com/in/rahul-pandharkar" className="contact-icon" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin fa-3x"></i>
-                  <span>Visit only if you're gonna recruit me :) </span>
+                  <span>Visit only if you're gonna recruit me :)</span>
                 </a>
-                <a href="https://github.com/rahulpandharkar" className="contact-icon">
+                <a href="https://github.com/rahulpandharkar" className="contact-icon" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github fa-3x"></i>
                   <span>Care to see my projects?</span>
                 </a>
-                <a href="https://www.instagram.com/rahul.pandharkar" className="contact-icon">
+                <a href="https://www.instagram.com/rahul.pandharkar" className="contact-icon" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-instagram fa-3x"></i>
-                  <span>There's no point, I'm socially dead :( </span>
+                  <span>There's no point, I'm socially dead :(</span>
                 </a>
               </div>
             </div>
           </div>
         );
-
 
     }
   };
