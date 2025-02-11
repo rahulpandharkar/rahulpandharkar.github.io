@@ -10,7 +10,14 @@ body {
   min-height: 100vh;
   overflow-y: auto;
   scrollbar-width: 0px;
+
+  /* Center the content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Ensures text is centered */
 }
+
 
 /* Scrollable content with hidden scrollbars */
 .everything {
@@ -357,6 +364,9 @@ body {
 @media (max-width: 768px) {
   .contact-icons {
     max-width: 100%;
+  }
+  .back-button { 
+    display: none;
   }
 
   .contact-icon {
