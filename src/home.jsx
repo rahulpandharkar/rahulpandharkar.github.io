@@ -11,9 +11,9 @@ const Home = () => {
   const [highlightedIndex, setHighlightedIndex] = useState(0);
   const navigate = useNavigate();
 
+  const [showMoreVMware, setShowMoreVMware] = useState(false);
   const [showMoreDallas, setShowMoreDallas] = useState(false);
   const [showMoreTheMouldStory, setShowMoreTheMouldStory] = useState(false);
-  const [showMoreScientificImpulse, setShowMoreScientificImpulse] = useState(false);
   const [showMoreMaharashtraCyber, setShowMoreMaharashtraCyber] = useState(false);
   const [showMoreKJSIT, setShowMoreKJSIT] = useState(false);
 
@@ -21,7 +21,6 @@ const Home = () => {
   const [showMoreParkEazy, setShowMoreParkEazy] = useState(false);
   const [showMoreRecall, setShowMoreRecall] = useState(false);
   const [showMoreFeedback, setShowMoreFeedback] = useState(false);
-  const [showMoreEmployeeTracking, setShowMoreEmployeeTracking] = useState(false);
   const [showMoreKeylogger, setShowMoreKeylogger] = useState(false);
   const [showMorePasswordManager, setShowMorePasswordManager] = useState(false);
   const [showMoreTagWise, setShowMoreTagWise] = useState(false);
@@ -81,20 +80,26 @@ const Home = () => {
         return (
           <div>
             <div className="text-for-typewriter">
-              I am currently pursuing a <span style={{ color: "orange" }}>Bachelor of Technology in Information Technology</span> at
-              <span style={{ color: "orange" }}> KJ Somaiya Institute of Technology (KJSIT)</span> with a maintained CGPA of <span style={{ color: "orange" }}>9.66</span><br /><br />
+              I am currently working at <span style={{ color: "orange" }}>VMWare by Broadcom</span> as a 
+              <span style={{ color: "orange" }}> Network Threat Analyst</span> 
+              <br /><br />
+
+              I have completed my Bachelor of Technology (B.Tech) in <span style={{ color: "orange" }}>Information Technology</span> with <span style={{ color: "orange" }}>Honours</span> in <span style={{ color: "orange" }}>Cybersecurity</span> from
+              <span style={{ color: "orange" }}> KJ Somaiya Institute of Technology (KJSIT), Mumbai</span> with a maintained CGPA of <span style={{ color: "orange" }}>9.7</span><br /><br />
 
               I am truly excited about building a career in the captivating world of
               <span style={{ color: "orange" }}> Cybersecurity</span>.<br /><br />
 
               Here are some of the skills I bring to the table:<br />
+              <span style={{ color: "orange" }}>Analyzing Network Security Threats</span><br />
+              <span style={{ color: "orange" }}>Studying Packet Capture Files</span><br />
+              <span style={{ color: "orange" }}>Penetrating Networks, Wen Applications, Softwares</span><br />
+              <span style={{ color: "orange" }}>Vulnerability Assessment and Mitigation</span>
               <span style={{ color: "orange" }}>Building Websites</span><br />
               <span style={{ color: "orange" }}>Building Applications</span><br />
               <span style={{ color: "orange" }}>Working with APIs</span><br />
               <span style={{ color: "orange" }}>Developing IoT Projects</span><br />
               <span style={{ color: "orange" }}>Creating AI/ML Models</span><br />
-              <span style={{ color: "orange" }}>Penetrating Networks</span><br />
-              <span style={{ color: "orange" }}>Assessing and Analyzing Threats and Vulnerabilities</span>
 
               {/* View CV Button */}
               <div style={{ marginTop: '20px' }}>
@@ -111,7 +116,7 @@ const Home = () => {
                     fontFamily: 'Press Start 2P, sans-serif' // Assuming you're using the same font
                   }}
                 >
-                  View my CV
+                  View my Freshers' Resume
                 </button>
               </div>
             </div>
@@ -180,9 +185,37 @@ const Home = () => {
             <p className="text-for-typewriter">
               <div style={{ textAlign: "justify" }}>
 
+                
+                {/* VMWare Experience */}
+                <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                  <img src="/icons/vmware-by-broadcom.jpg" alt="VMWare Icon" style={{ height: "50px", marginRight: "10px" }} />
+                  <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>VMWare by Broadcom (Jun'25 - Present)</span>
+                </div>
+                <span style={{ fontSize: "14px", color: "white" }}>Network Threat Analyst</span>
+                <br />
+                {showMoreVMware ? (
+                  <>
+                    <span style={{ fontSize: "12px", color: "white" }}>
+                      Contractor Position from Squareshift.<br />
+                      Writing Protective Signatures for Intrusion Detection Prevention Systems (IDPS).<br />
+                      Researching about various Common Vulnerabilities and Exposures (CVEs) and their impact on the network<br />
+                      Analyzing Packet Capture Files to detect and understand exploit traffic.
+                    </span>
+                    <br /><br />
+                    <button onClick={() => setShowMoreVMware(false)} style={{ fontSize: "12px", color: "orange", background: "none", border: "none", cursor: "pointer" }}>
+                      View Less
+                    </button>
+                  </>
+                ) : (
+                  <button onClick={() => setShowMoreVMware(true)} style={{ fontSize: "12px", color: "orange", background: "none", border: "none", cursor: "pointer" }}>
+                    View More
+                  </button>
+                )}
+                <br /><br />
+                
                 {/* The Mould Story Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <img src="/icons/the_mould_story.png" alt="The Mould Story Icon" style={{ height: "30px", marginRight: "10px" }} />
+                  <img src="/icons/the_mould_story.png" alt="The Mould Story Icon" style={{ height: "50px", marginRight: "10px" }} />
                   <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>The Mould Story (Jun'24 - Aug'24)</span>
                 </div>
                 <span style={{ fontSize: "14px", color: "white" }}>CRM Chatbot Developer</span>
@@ -193,7 +226,7 @@ const Home = () => {
                       Developed a CRM Chatbot for efficient Order Status Tracking through WhatsApp messages and basic FAQs.<br />
                       Conducted task-specific research to provide insights for new strategies.<br />
                       Contributed to designing Material Safety and Technical Datasheets and industrialized product labels.<br />
-                      Assisted in creating content for the company’s social media accounts.
+                      Assisted in creating content for the company's social media accounts.
                     </span>
                     <br />
                     <a
@@ -201,7 +234,7 @@ const Home = () => {
                       onClick={() => handleOpenDialog("/certificates/Letter of Recommendation (Mould Story).pdf")}
                       style={{ fontSize: "12px", color: "orange", textDecoration: "none" }}
                     >
-                      Click here to view Certificate
+                      Click here to view Letter of Recommendation
                     </a>
                     <br /><br />
                     <button onClick={() => setShowMoreTheMouldStory(false)} style={{ fontSize: "12px", color: "orange", background: "none", border: "none", cursor: "pointer" }}>
@@ -214,9 +247,9 @@ const Home = () => {
                   </button>
                 )}
                 <br /><br />
-                {/* The Mould Story Experience */}
+                {/* Dallas Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <img src="/icons/dallas.png" alt="University of Texas Logo" style={{ height: "30px", marginRight: "10px" }} />
+                  <img src="/icons/dallas.png" alt="University of Texas Logo" style={{ height: "50px", marginRight: "10px" }} />
                   <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>University of Texas (Jun'23 - Jul'24)</span>
                 </div>
                 <span style={{ fontSize: "14px", color: "white" }}>Full Stack Developer</span>
@@ -233,7 +266,7 @@ const Home = () => {
                       onClick={() => handleOpenDialog("/certificates/Dallas LOA.pdf")}
                       style={{ fontSize: "12px", color: "orange", textDecoration: "none" }}
                     >
-                      Click here to view Certificate
+                      Click here to view Letter of Appreciation 
                     </a>
                     <br /><br />
                     <button onClick={() => setShowMoreDallas(false)} style={{ fontSize: "12px", color: "orange", background: "none", border: "none", cursor: "pointer" }}>
@@ -247,45 +280,9 @@ const Home = () => {
                 )}
                 <br /><br />
 
-                {/* Scientific Impulse Experience */}
-                <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <img src="/icons/scientific_impulse.jpeg" alt="Scientific Impulse Icon" style={{ height: "30px", marginRight: "10px" }} />
-                  <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>Scientific Impulse (May'24 - Jun'24)</span>
-                </div>
-                <span style={{ fontSize: "14px", color: "white" }}>Researcher</span>
-                <br />
-                {showMoreScientificImpulse ? (
-                  <>
-                    <span style={{ fontSize: "12px", color: "white" }}>
-                      Conducted in-depth research on various scientific topics, uncovering valuable insights.<br />
-                      Structured findings into clear, well-organized documents for easy understanding.<br />
-                      Actively participated in meetings and contributed to collaborative discussions.<br />
-                      Interpreted research outcomes and communicated them effectively to team members.<br />
-                      Collaborated with colleagues to drive innovative solutions in scientific research.
-                    </span>
-                    <br />
-                    <a
-                      href="#!"
-                      onClick={() => handleOpenDialog("/certificates/scientific_impulse.pdf")}
-                      style={{ fontSize: "12px", color: "orange", textDecoration: "none" }}
-                    >
-                      Click here to view Certificate
-                    </a>
-                    <br /><br />
-                    <button onClick={() => setShowMoreScientificImpulse(false)} style={{ fontSize: "12px", color: "orange", background: "none", border: "none", cursor: "pointer" }}>
-                      View Less
-                    </button>
-                  </>
-                ) : (
-                  <button onClick={() => setShowMoreScientificImpulse(true)} style={{ fontSize: "12px", color: "orange", background: "none", border: "none", cursor: "pointer" }}>
-                    View More
-                  </button>
-                )}
-                <br /><br />
-
                 {/* Maharashtra Cyber Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <img src="/icons/maharashtra_cyber.png" alt="Maharashtra Cyber Icon" style={{ height: "30px", marginRight: "10px" }} />
+                  <img src="/icons/maharashtra_cyber.png" alt="Maharashtra Cyber Icon" style={{ height: "50px", marginRight: "10px" }} />
                   <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>Maharashtra Cyber (Dec'23)</span>
                 </div>
                 <span style={{ fontSize: "14px", color: "white" }}>Open Source Intelligence Intern</span>
@@ -313,7 +310,7 @@ const Home = () => {
 
                 {/* KJ Somaiya Experience */}
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <img src="/icons/somaiya.jpeg" alt="KJSIT Icon" style={{ height: "30px", marginRight: "10px" }} />
+                  <img src="/icons/somaiya.jpeg" alt="KJSIT Icon" style={{ height: "50px", marginRight: "10px" }} />
                   <span style={{ color: "orange", fontSize: "18px", fontWeight: "bold" }}>KJ Somaiya Institute of Technology (Dec'22 - Jan'23)</span>
                 </div>
                 <span style={{ fontSize: "14px", color: "white" }}>Web Development Intern</span>
@@ -509,32 +506,9 @@ const Home = () => {
                 )}
               </div>
 
-              {/* Employee Attendance Tracking */}
-              <div style={{ display: "flex", flexDirection: "column", marginBottom: "10px", textAlign: "left" }}>
-                <h3 style={{ color: "orange" }}>5. Employee Attendance Tracking App</h3>
-                {showMoreEmployeeTracking ? (
-                  <>
-                    <p style={{ color: "white" }}>
-                      An Android app for supervisors to track employees' real-time locations and attendance using Open Source Maps. It sends GPS updates to admins.
-                    </p>
-                    <a href="https://github.com/rahulpandharkar/Employee_Tracking" target="_blank">
-                      <img src="/icons/github.png" alt="GitHub" style={{ width: '40px' }} />
-                    </a>
-                    <br />
-                    <button onClick={() => setShowMoreEmployeeTracking(false)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
-                      View Less
-                    </button>
-                  </>
-                ) : (
-                  <button onClick={() => setShowMoreEmployeeTracking(true)} style={{ fontSize: "12px", color: "white", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
-                    View More
-                  </button>
-                )}
-              </div>
-
               {/* Keylogger: Credential Harvesting */}
               <div style={{ display: "flex", flexDirection: "column", marginBottom: "10px", textAlign: "left" }}>
-                <h3 style={{ color: "orange" }}>6. Keylogger: Credential Harvesting</h3>
+                <h3 style={{ color: "orange" }}>5. Keylogger: Credential Harvesting</h3>
                 {showMoreKeylogger ? (
                   <>
                     <p style={{ color: "white" }}>
@@ -557,7 +531,7 @@ const Home = () => {
 
               {/* Password Manager */}
               <div style={{ display: "flex", flexDirection: "column", marginBottom: "10px", textAlign: "left" }}>
-                <h3 style={{ color: "orange" }}>7. Password Manager</h3>
+                <h3 style={{ color: "orange" }}>6. Password Manager</h3>
                 {showMorePasswordManager ? (
                   <>
                     <p style={{ color: "white" }}>
@@ -580,7 +554,7 @@ const Home = () => {
 
               {/* RestFul vs gRPC (A Research) */}
               <div style={{ display: "flex", flexDirection: "column", marginBottom: "10px", textAlign: "left" }}>
-                <h3 style={{ color: "orange" }}>8. RestFul vs gRPC (A Research)</h3>
+                <h3 style={{ color: "orange" }}>7. RestFul vs gRPC (A Research)</h3>
                 {showMoreRestful ? (
                   <>
                     <p style={{ color: "white" }}>
@@ -604,7 +578,7 @@ const Home = () => {
 
               {/* TagWise: IoT-based Inventory Management */}
               <div style={{ display: "flex", flexDirection: "column", marginBottom: "10px", textAlign: "left" }}>
-                <h3 style={{ color: "orange" }}>9. TagWise: IoT-based Inventory Management</h3>
+                <h3 style={{ color: "orange" }}>8. TagWise: IoT-based Inventory Management</h3>
                 {showMoreTagWise ? (
                   <>
                     <p style={{ color: "white" }}>
@@ -631,7 +605,7 @@ const Home = () => {
 
               {/* User Management System */}
               <div style={{ display: "flex", flexDirection: "column", marginBottom: "10px", textAlign: "left" }}>
-                <h3 style={{ color: "orange" }}>10. User Management System</h3>
+                <h3 style={{ color: "orange" }}>9. User Management System</h3>
                 {showMoreUserManagement ? (
                   <>
                     <p style={{ color: "white" }}>
@@ -654,7 +628,7 @@ const Home = () => {
 
               {/* Railway Help Chatbot */}
               <div style={{ display: "flex", flexDirection: "column", marginBottom: "10px", textAlign: "left" }}>
-                <h3 style={{ color: "orange" }}>11. Railway Help Chatbot</h3>
+                <h3 style={{ color: "orange" }}>10. Railway Help Chatbot</h3>
                 {showMoreRailwayChatbot ? (
                   <>
                     <p style={{ color: "white" }}>
@@ -677,8 +651,6 @@ const Home = () => {
             </div>
           </div>
         );
-
-
       case 'Positions of Responsibility':
         return (
           <p className="text-for-typewriter">
@@ -832,6 +804,9 @@ const Home = () => {
                 <img src="https://img.shields.io/badge/SETToolKit-%23F39C12.svg?style=for-the-badge&logo=python&logoColor=white" alt="SET ToolKit" />
                 <img src="https://img.shields.io/badge/OWASP%20Top%2010-%239B1C31.svg?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP Top 10" />
                 <img src="https://img.shields.io/badge/MITRE%20ATT%26CK-%230052A3.svg?style=for-the-badge&logo=mitre&logoColor=white" alt="MITRE ATT&CK Framework" />
+                <img src="https://img.shields.io/badge/Suricata-%23FF5A36?style=for-the-badge&logo=suricata&logoColor=white" alt="Suricata" />
+                <img src="https://img.shields.io/badge/Snort-%23F89820?style=for-the-badge&logo=🐷&logoColor=white" alt="Snort" />
+                <img src="https://img.shields.io/badge/CVE%20Research-%23007BFF?style=for-the-badge&logo=search&logoColor=white" alt="CVE Research" />
               </div>
 
 
