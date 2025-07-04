@@ -11,7 +11,7 @@ The design of this website is inspired by the **Flipper Zero** device. As a cybe
 - **ReactJS**: For building the user interface and handling interactivity.
 - **React Three Fiber**: A React library for ThreeJS to render the 3D model of Flipper Zero.
 - **Vite**: A fast build tool and development server for a smooth experience.
-- **Github Pages**: For seamless Deployment
+- **Github Pages**: For seamless Deployment.
 
 
 ## Credits
