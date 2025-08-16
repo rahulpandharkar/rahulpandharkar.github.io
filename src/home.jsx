@@ -91,10 +91,9 @@ const Home = () => {
               <span style={{ color: "orange" }}> Cybersecurity</span>.<br /><br />
 
               Here are some of the skills I bring to the table:<br />
-              <span style={{ color: "orange" }}>Analyzing Network Security Threats</span><br />
-              <span style={{ color: "orange" }}>Studying Packet Capture Files</span><br />
-              <span style={{ color: "orange" }}>Penetrating Networks, Wen Applications, Softwares</span><br />
-              <span style={{ color: "orange" }}>Vulnerability Assessment and Mitigation</span>
+              <span style={{ color: "orange" }}>Analyzing Network Security Threats (Researching about CVEs and related Packet Capture Files)</span><br />
+              <span style={{ color: "orange" }}>Penetration Testing of Networks, Web Applications and Softwares</span><br />
+              <span style={{ color: "orange" }}>Vulnerability Assessment and Mitigation</span><br />
               <span style={{ color: "orange" }}>Building Websites</span><br />
               <span style={{ color: "orange" }}>Building Applications</span><br />
               <span style={{ color: "orange" }}>Working with APIs</span><br />
